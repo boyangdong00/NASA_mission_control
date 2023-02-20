@@ -29,8 +29,14 @@ function submitLaunch(launch){
     }));
 }
 
+// function abortLaunch(id){
+//     latestFlightNumber--;
+//     launches.delete(id);
+// }
+
 module.exports = {
     launches,
     getAllLaunches,
-    submitLaunch
+    submitLaunch,
+    // abortLaunch
 };
