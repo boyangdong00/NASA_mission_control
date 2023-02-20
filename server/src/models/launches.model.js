@@ -1,5 +1,7 @@
 const launches = new Map();
 
+let latestFlightNumber = 0;
+
 const launch = {
         flightNumber: 0,
         mission: "first moon",
@@ -17,7 +19,18 @@ function getAllLaunches() {
     return Array.from(launches.values());
 }
 
+function submitLaunch(launch){
+    latestFlightNumber++;
+    launches.set(latestFlightNumber,Object.assign(launch, {
+        success: true,
+        upcoming: true,
+        customers: ['Blue origin','SpaceX'],
+        flightNumber: latestFlightNumber,
+    }));
+}
+
 module.exports = {
     launches,
     getAllLaunches,
+    submitLaunch
 };

@@ -23,8 +23,8 @@ app.use(morgan('combined'));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "..", "public")));
 // setting up routers
-app.use(planetsRouter);
-app.use(launchesRouter);
+app.use('/planets',planetsRouter);
+app.use('/launches',launchesRouter);
 // render client side assets and ensure all pages will be rendered for production
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "index.html"));
