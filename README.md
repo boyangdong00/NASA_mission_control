@@ -43,4 +43,7 @@ As Software Engineer, I would like to build application helping people to learn 
 
 
 - Demos:
-    ![front](./demo/front-end.png)
+    ![front](./demo/img/front-end.png)
+
+- Architecture Diagram:
+    ![](./demo/chart/architecture.png)
